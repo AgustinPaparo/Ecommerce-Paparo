@@ -10,8 +10,8 @@
   color: #fff;
   font-size: 1.5em;
 }
-.navbar .navbar-nav{
-  color: #fff;
+.navbar .navbar-nav .nav-item a{
+  color: #fff ;
   font-size: 1.2em;
 }
 
