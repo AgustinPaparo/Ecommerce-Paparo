@@ -1,11 +1,11 @@
 import React from "react";
 import Logo from "../images/logo.png";
-import ItemListContainer from "./ItemListContainer"
+import ItemListNav from "./ItemListNav"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg fixed">
+    <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
@@ -57,11 +57,11 @@ const NavBar = () => {
                 Contacto
               </a>
             </li> */}
-            <ItemListContainer  greeting="Inicio"/> 
-            <ItemListContainer  greeting="Alquileres"/> 
-            <ItemListContainer  greeting="Ventas"/> 
-            <ItemListContainer  greeting="Quienes Somos?"/> 
-            <ItemListContainer  greeting="Contacto"/> 
+            <ItemListNav  nav="Inicio"/> 
+            <ItemListNav  nav="Alquileres"/> 
+            <ItemListNav  nav="Ventas"/> 
+            <ItemListNav  nav="Quienes Somos?"/> 
+            <ItemListNav  nav="Contacto"/> 
           </ul>
         </div>
         <CartWidget />

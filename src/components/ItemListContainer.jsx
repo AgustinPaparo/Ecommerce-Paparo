@@ -1,12 +1,12 @@
 import React from "react";
 
-const Item = (props) => {
+const ItemListContainer = (props) => {
   return (
-    <li className="nav-item">
-      <a className="nav-link active" aria-current="page" href="#">
-        {props.greeting}
-      </a>
+    <li>
+        <h4>
+        {props.greetin}
+        </h4>
     </li>
   );
 };
-export default Item;
+export default ItemListContainer;
