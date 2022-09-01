@@ -1,8 +1,7 @@
 import React from "react";
-import Banner1 from '../images/banner1.jpg'
 
-
-const Header = (banner) => {
+// HACER QUE SE CAMBIE LA CLASE PARA ASI CAMBIAR EL BANNER DE FONDO
+const Banner = () => {
     return(
         <div className="text-center container-fluid banner">
             
@@ -10,4 +9,4 @@ const Header = (banner) => {
     )
 }
 
-export default Header;
+export default Banner;

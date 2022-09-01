@@ -1,9 +1,11 @@
 import React from "react";
 import Logo from "../images/logo.png";
+import ItemListContainer from "./ItemListContainer"
+import CartWidget from "./CartWidget"
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg ">
+    <nav className="navbar navbar-expand-lg fixed">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
@@ -30,26 +32,39 @@ const NavBar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 Inicio
               </a>
             </li>
             <li className="nav-item ">
               <a className="nav-link" href="#">
-                Inmuebles
+                Alquileres
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Terrenos
+                Ventas
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Contacto</a>
+              <a className="nav-link" href="#">
+                Quienes Somos?
+              </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Contacto
+              </a>
+            </li> */}
+            <ItemListContainer  greeting="Inicio"/> 
+            <ItemListContainer  greeting="Alquileres"/> 
+            <ItemListContainer  greeting="Ventas"/> 
+            <ItemListContainer  greeting="Quienes Somos?"/> 
+            <ItemListContainer  greeting="Contacto"/> 
           </ul>
         </div>
+        <CartWidget />
       </div>
     </nav>
   );

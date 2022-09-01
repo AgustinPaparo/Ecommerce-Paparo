@@ -23,3 +23,13 @@
   background-repeat: no-repeat;
 
 }
+
+.fondo-logo{  
+  background-color: #0a1420;
+}
+.fondo-logo a{
+  text-decoration: none;
+  text-transform: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
