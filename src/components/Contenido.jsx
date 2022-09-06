@@ -1,10 +1,12 @@
 import React from "react";
 import ItemListContainer from "./ItemListContainer"
+import ItemCount from "./ItemCount";
 
 const Contenido = () => {
   return (
     <div className="d-flex  justify-content-center ">
         <ul>
+          <ItemCount stock={9} initial={1} onAdd={0}/>
             <ItemListContainer greetin="Producto1"/>
             <ItemListContainer greetin='Producto2'/>
             <ItemListContainer greetin='Producto3'/>
