@@ -14,7 +14,7 @@ const NavBar = () => {
             width="40"
             className="me-2 d-inline-block img-fluid "
           />
-          Elizalde-Asociados
+          Nombre de la marca
         </a>
         <button
           className="navbar-toggler"
@@ -32,34 +32,9 @@ const NavBar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ">
-            {/* <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Inicio
-              </a>
-            </li>
-            <li className="nav-item ">
-              <a className="nav-link" href="#">
-                Alquileres
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Ventas
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Quienes Somos?
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contacto
-              </a>
-            </li> */}
+            
             <ItemListNav  nav="Inicio"/> 
-            <ItemListNav  nav="Alquileres"/> 
-            <ItemListNav  nav="Ventas"/> 
+            <ItemListNav  nav="Catálogo"/> 
             <ItemListNav  nav="Quienes Somos?"/> 
             <ItemListNav  nav="Contacto"/> 
           </ul>

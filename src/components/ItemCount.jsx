@@ -24,10 +24,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div className="container  text-center">
+    <div className="container card-body">
       <div className="row justify-content-center">
-        <div className="col-4 ">
-          <h5>Nombre del Producto</h5>
+        <div className="col-6 ">
           <div className="input-group ">
             <input
               className="btn btn-danger col-3"
@@ -52,15 +51,15 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           </div>
           <input
             type="button"
-            className="btn btn-primary mt-2"
+            className="btn btn-primary mt-2 col-12"
             value="Agregar a Carrito"
             onClick={() => {
               agregarProducto();
             }}
           />
         </div>
-        <p>Displonibles : {itemStock}</p>
-        <p>Seleccionados : {ItemAdd}</p>
+        <p className="mb-0">Seleccionados : {ItemAdd}</p>
+        <p >Displonibles : {itemStock}</p>
       </div>
     </div>
   );
