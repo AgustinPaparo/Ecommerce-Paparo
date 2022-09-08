@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+#contenido{
+  background-color:antiquewhite ;
+}
 
 .navbar{
   background-color: #0a1420;
@@ -13,15 +16,6 @@
 .navbar .navbar-nav .nav-item a{
   color: #fff ;
   font-size: 1.2em;
-}
-
-.banner{
-  height: 420px ;
-  background-image:url(./images/banner1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
 }
 
 .fondo-logo{  

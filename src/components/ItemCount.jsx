@@ -24,7 +24,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div className="container py-5 text-center">
+    <div className="container  text-center">
       <div className="row justify-content-center">
         <div className="col-4 ">
           <h5>Nombre del Producto</h5>
@@ -40,6 +40,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               type="text"
               className="form-control text-center"
               value={cantidad}
+              onChange={()=>{}}
             />
             <input
               className="btn btn-danger col-3"
