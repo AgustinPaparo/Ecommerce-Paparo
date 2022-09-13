@@ -7,20 +7,12 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../images/logo2.jpg";
 
 const Footer = () => {
   return (
     <div className="container-fluid fondo-logo text-white pb-2">
       <div className="row">
-        <div className="col-12 text-center mt-3 mb-5">
-          <img
-            src={Logo}
-            alt="Logo de empresa"
-            className="img-fluid"
-            width={"300px"}
-          />
-        </div>
+        
         <div className="col-6 text-center">
           <h4 className="mb-3">Encontranos en nuestras Redes!</h4>
           <a href="https://www.facebook.com/elizaldenegociosinmobiliarios">

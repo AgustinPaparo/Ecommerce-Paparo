@@ -4,7 +4,7 @@ import { useState } from "react";
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [cantidad, setCantidad] = useState(initial);
   const [itemStock, setItemStock] = useState(stock);
-  const [ItemAdd, setItemAdd] = useState(onAdd);
+  const [itemAdd, setItemAdd] = useState(onAdd);
 
   const disminuirCantidad = (valor) => {
     if (valor > 0) {
@@ -19,7 +19,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const agregarProducto = () => {
     if (cantidad <= itemStock) {
       setItemStock(itemStock - cantidad);
-      setItemAdd(ItemAdd + cantidad);
+      setItemAdd(itemAdd + cantidad);
     }
   };
 
@@ -58,7 +58,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             }}
           />
         </div>
-        <p className="mb-0">Seleccionados : {ItemAdd}</p>
+        <p className="mb-0">Seleccionados : {itemAdd}</p>
         <p >Displonibles : {itemStock}</p>
       </div>
     </div>

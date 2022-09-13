@@ -1,7 +1,7 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar.jsx";
 import Footer from "./components/Footer"
-import Contenido from "./components/Contenido";
+import Container from "./components/Container";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
     
       <NavBar />
     
-      <Contenido />
+      <Container />
     
       <Footer />
     </>
