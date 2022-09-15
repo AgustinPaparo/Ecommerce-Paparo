@@ -222,7 +222,7 @@ const ItemListContainer = () => {
 		<>
 			<NavBar />
 			<div id="contenido" className="text-center container-fluid py-5 px-5">
-				<h1>Todos los prouctos</h1>
+				<h1>Catálogo</h1>
 				<ItemList items={items} />
 			</div>
 			<Footer />

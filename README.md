@@ -1,3 +1,24 @@
+# Primera Entrega Projecto Final
+
+El proyecto consta de hacer un sitio web tipo E-commerce con el fin de demostrar lo aprendido en el curso de React-Js dado por CODERHOUSE.
+
+Siguiendo los pasos del profesor @JavierVeron, se fue desarrollando un sitio E-commerce utilizando
+distintas tecnologías y técnicas de React-Js.
+
+Además se incorporó librerías de css como Boostrap 5 para poder facilitar el diseño con CSS.
+
+## 🛠 Skills
+Javascript, HTML, CSS, REACT-JS...
+
+## 🚀 About Me
+Estudiante de ingeniería y apacionado por la programación...
+
+## Authors
+
+- [@AgustinPaparo](https://github.com/AgustinPaparo/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
