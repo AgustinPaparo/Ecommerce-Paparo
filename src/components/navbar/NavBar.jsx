@@ -1,14 +1,14 @@
 import React from "react";
-import ItemListNav from "./ItemListNav";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="container-fluid">
-				<a className="navbar-brand" href="#">
+				<Link className="navbar-brand" to={"/"}>
 					Nombre de la marca
-				</a>
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -25,10 +25,60 @@ const NavBar = () => {
 					id="navbarNav"
 				>
 					<ul className="navbar-nav ">
-						<ItemListNav nav="Inicio" />
-						<ItemListNav nav="Catálogo" />
-						<ItemListNav nav="Quienes Somos?" />
-						<ItemListNav nav="Contacto" />
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/abrigos"}
+							>
+								Abrigos
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/accesorios"}
+							>
+								Accesorios
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/camisas"}
+							>
+								Camisas
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/calzados"}
+							>
+								Calzados
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/pantalones"}
+							>
+								Pantalones
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								className="nav-link "
+								aria-current="page"
+								to={"/categorias/remeras"}
+							>
+								Remeras
+							</Link>
+						</li>
 					</ul>
 				</div>
 				<CartWidget />

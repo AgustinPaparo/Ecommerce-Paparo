@@ -5,7 +5,7 @@ const ItemDetail = ({ item }) => {
 	return (
 		<div className="row my-5 text-center">
 			<div className=" col-8 ">
-				<img src={item.imagen} alt={item.nombre} style ={{width:'500px'}} />
+				<img src={item.imagen} alt={item.nombre} style={{ width: "500px" }} />
 			</div>
 			<div className="col-4 ">
 				<h2>{item.nombre}</h2>

@@ -4,7 +4,7 @@ import Item from "./Item";
 const ItemList = ({ items }) => {
 	console.log(items);
 	return (
-		<div className="row">
+		<div className="row px-5 mx-5">
 			{items.map((item) => (
         <div className="col-4 py-3" key={item.id}>
           <Item
