@@ -31,6 +31,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             <input
               className="btn btn-danger col-3"
               value="-"
+              onChange={()=>{}}
               onClick={() => {
                 disminuirCantidad(cantidad - 1);
               }}
@@ -44,6 +45,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             <input
               className="btn btn-danger col-3"
               value="+"
+              onChange={()=>{}}
               onClick={() => {
                 aumentarCantidad(cantidad + 1);
               }}

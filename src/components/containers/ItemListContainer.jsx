@@ -6,7 +6,7 @@ import NavBar from "../Navbar/NavBar";
 import Footer from "../Footer";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ categoria }) => {
+const ItemListContainer = () => {
 	const [items, setItems] = useState([]);
 	const{tipo} = useParams();
 
@@ -216,7 +216,7 @@ const ItemListContainer = ({ categoria }) => {
 				setItems(array_productos);
 			}
 		});
-	}, [categoria]);
+	}, [tipo]);
 
 	return (
 		<>

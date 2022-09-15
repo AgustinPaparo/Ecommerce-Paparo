@@ -12,8 +12,7 @@ const ItemDetail = ({ item }) => {
 				<p style={{ maxWidth: "700px", margin: "auto" }}>{item.descripcion}</p>
 				<h3>${item.precio}</h3>
 
-				<ItemCount stock={5} initial={1} onAdd={0} />
-				{/* Al agregar talles con cantidades distintas en el stock no pude soolucionar hacer un stock dinámico */}
+				<ItemCount stock={item.stock} initial={1} onAdd={0} />
 			</div>
 		</div>
 	);
