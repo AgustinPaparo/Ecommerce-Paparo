@@ -24,7 +24,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
 	useEffect(() => {
 		setItemStock(stock);
-    console.log(stock);
 	}, [stock]);
 
 	return (
@@ -64,7 +63,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 						}}
 					/>
 				</div>
-				<p className="mb-0">Seleccionados : {onAdd}</p>
 				<p>Displonibles : {itemStock}</p>
 			</div>
 		</div>
