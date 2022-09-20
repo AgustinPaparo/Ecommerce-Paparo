@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping , faTrash } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../Context/Context";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  return (
-    <a href="#" className="text-white ms-4">
-      <FontAwesomeIcon icon={faCartShopping} />
-    </a>
-  );
+	const { cartTotal, clear } = useContext(CartContext);
+
+	return (
+		<div>
+			<button
+				type="button"
+				className="btn btn-danger btn-sm position-relative mx-2"
+				title="Vaciar Carrito"
+				onClick={() => {
+					clear();
+				}}
+			>
+				<FontAwesomeIcon icon={faTrash} />
+			</button>
+			<Link to={"/cart"} className="text-white ">
+				<FontAwesomeIcon icon={faCartShopping} />
+				<span className="badge ">
+					({cartTotal()})
+				</span>
+			</Link>
+		</div>
+	);
 };
 export default CartWidget;

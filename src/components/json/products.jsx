@@ -7,11 +7,7 @@ export const products = [
 		tipo: "Accesorios",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 6 },
-			{ talle: "M", cantidad: 6 },
-			{ talle: "L", cantidad: 5 },
-		],
+		stock: 6
 	},
 	{
 		precio: 2000,
@@ -21,11 +17,7 @@ export const products = [
 		tipo: "Remeras",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 3 },
-			{ talle: "M", cantidad: 4 },
-			{ talle: "L", cantidad: 3 },
-		],
+		stock: 3
 	},
 	{
 		precio: 3000,
@@ -35,11 +27,7 @@ export const products = [
 		tipo: "Abrigos",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 0 },
-			{ talle: "M", cantidad: 1 },
-			{ talle: "L", cantidad: 2 },
-		],
+		stock: 0
 	},
 	{
 		precio: 10000,
@@ -49,11 +37,7 @@ export const products = [
 		tipo: "Abrigos",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 6 },
-			{ talle: "M", cantidad: 7 },
-			{ talle: "L", cantidad: 2 },
-		],
+		stock: 6
 	},
 	{
 		precio: 11000,
@@ -63,11 +47,7 @@ export const products = [
 		tipo: "Abrigos",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 4 },
-			{ talle: "M", cantidad: 0 },
-			{ talle: "L", cantidad: 2 },
-		],
+		stock: 4
 	},
 	{
 		precio: 16000,
@@ -77,11 +57,7 @@ export const products = [
 		tipo: "Abrigos",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 8 },
-			{ talle: "M", cantidad: 3 },
-			{ talle: "L", cantidad: 1 },
-		],
+		stock: 8
 	},
 	{
 		precio: 3500,
@@ -91,11 +67,7 @@ export const products = [
 		tipo: "Camisas",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 3 },
-			{ talle: "M", cantidad: 6 },
-			{ talle: "L", cantidad: 7 },
-		],
+		stock: 2
 	},
 	{
 		precio: 2500,
@@ -105,11 +77,7 @@ export const products = [
 		tipo: "Remeras",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 0 },
-			{ talle: "M", cantidad: 2 },
-			{ talle: "L", cantidad: 6 },
-		],
+		stock: 7
 	},
 	{
 		precio: 4000,
@@ -119,11 +87,7 @@ export const products = [
 		tipo: "Camisas",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 3 },
-			{ talle: "M", cantidad: 9 },
-			{ talle: "L", cantidad: 1 },
-		],
+		stock: 1
 	},
 	{
 		precio: 2750,
@@ -133,11 +97,7 @@ export const products = [
 		tipo: "Remeras",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 0 },
-			{ talle: "M", cantidad: 5 },
-			{ talle: "L", cantidad: 3 },
-		],
+		stock: 9
 	},
 	{
 		precio: 12000,
@@ -147,11 +107,7 @@ export const products = [
 		tipo: "Calzados",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 2 },
-			{ talle: "M", cantidad: 2 },
-			{ talle: "L", cantidad: 3 },
-		],
+		stock: 8
 	},
 	{
 		precio: 9000,
@@ -161,10 +117,6 @@ export const products = [
 		tipo: "Pantalones",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum culpa non mollitia eveniet soluta amet, ea expedita maxime commodi voluptatibus provident eos delectus saepe totam? Quia id maiores error numquam?",
-		stock: [
-			{ talle: "S", cantidad: 4 },
-			{ talle: "M", cantidad: 3 },
-			{ talle: "L", cantidad: 0 },
-		],
+		stock: 5
 	},
 ];

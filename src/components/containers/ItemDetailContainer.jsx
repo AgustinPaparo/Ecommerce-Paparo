@@ -13,9 +13,8 @@ const ItemDetailContainer = () => {
 
 	useEffect(() => {
 		const getProduct = new Promise((res, fail) => {
-			const product = products.find((prod) => prod.id == id);
 			setTimeout(() => {
-				res(product);
+				res(products.find((prod) => prod.id === parseInt(id)) || []);
 			}, 500);
 		});
 		getProduct.then((prod) => {
