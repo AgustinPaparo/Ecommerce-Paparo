@@ -29,7 +29,7 @@ const ItemListContainer = () => {
 			categoria = "all";
 		}
 
-		console.log(categoria);
+		// console.log(categoria);
 
 		const promesa = new Promise((resolve, reject) => {
 			setTimeout(() => {

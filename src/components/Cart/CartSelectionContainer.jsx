@@ -1,9 +1,11 @@
 import React from "react";
-import CartSelection from "./CartSelection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const CartSelectionContainer = ({ items, clear }) => {
+const CartSelectionContainer = ({ items, clear, cartTotal, cartTotalPrice, deleteOne }) => {
+	
 	return (
-		<div className="container">
+		<div className="container mb-5">
 			<table className="table table-striped table-light">
 				<thead>
 					<tr>
@@ -16,23 +18,32 @@ const CartSelectionContainer = ({ items, clear }) => {
 				</thead>
 				{items.map((item) => (
 					<tbody key={item.id}>
-						<CartSelection
-							counter={item.counter}
-							id={item.id}
-							nombre={item.nombre}
-							imagen={item.imagen}
-							precio={item.precio}
-							descripcion={item.descripcion}
-							stock={item.stock}
-						/>
+						<tr>
+							<td>{item.nombre}</td>
+							<td>${item.precio}</td>
+							<td>{item.counter}</td>
+							<td>$({item.counter}*{item.precio})</td>
+							<td><button
+				type="button"
+				className="btn btn-danger btn-sm position-relative mx-2"
+				title="Eliminar producto"
+				onClick={() => {
+					deleteOne(item.id);
+				}}
+			>
+				<FontAwesomeIcon icon={faTrash} />
+			</button></td>
+						</tr>
 					</tbody>
 				))}
 			</table>
-
-			<button className="btn btn-danger btn-sm" onClick={clear}>
+			<span>Seleccionaste {cartTotal()} productos --- </span>
+			<span>El total a pagar es: $({cartTotalPrice()})</span>
+			<button className="btn btn-danger btn-sm ms-3 " onClick={clear}>
 				Vaciar
 			</button>
 		</div>
 	);
 };
+
 export default CartSelectionContainer;

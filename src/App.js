@@ -23,7 +23,6 @@ function App() {
 						element={<ItemDetailContainer />}
 					/>
 					<Route path={"/cart"} element={<Cart />} />
-					<Route path={"/menu"} element={<ItemListContainer />} />
 					<Route path={"/checkout"} element={<Checkout />} />
 				</Routes>
 			</BrowserRouter>

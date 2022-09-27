@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useContext,  useEffect  } from "react";
 import CartWidget from "./CartWidget";
+import { CartContext } from "../Context/Context";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+	const { cartTotal} = useContext(CartContext);
+	const [cartState, setCartState] = useState(true);
+
+
+	useEffect(()=>{
+	if(cartTotal() !== 0){
+		setCartState(false)
+	}
+	},[cartTotal()])
+	
+
+
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="container-fluid">
@@ -81,7 +94,8 @@ const NavBar = () => {
 						</li>
 					</ul>
 				</div>
-				<CartWidget />
+				{cartState === true ? "" : (
+				<CartWidget />)}
 			</div>
 		</nav>
 	);
