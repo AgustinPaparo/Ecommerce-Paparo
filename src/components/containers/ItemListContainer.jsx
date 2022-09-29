@@ -5,47 +5,35 @@ import { useState } from "react";
 import NavBar from "../Navbar/NavBar";
 import Footer from "../Footer";
 import { useParams } from "react-router-dom";
-import {products} from '../Json/products'
+import {
+	collection,
+	getDocs,
+	getFirestore,
+	query,
+	where,
+} from "firebase/firestore";
 
 const ItemListContainer = () => {
 	const [items, setItems] = useState([]);
-	const{tipo} = useParams();
+	const { tipo } = useParams();
 
 	useEffect(() => {
-		let categoria = ""
-		if (tipo === "abrigos") {
-			categoria = "Abrigos";
-		} else if (tipo === "accesorios") {
-			categoria = "Accesorios";
-		} else if (tipo === "camisas") {
-			categoria = "Camisas";
-		} else if (tipo === "calzados") {
-			categoria = "Calzados";
-		} else if (tipo === "pantalones") {
-			categoria ="Pantalones";
-		} else if (tipo === "remeras") {
-			categoria = "Remeras";
-		} else {
-			categoria = "all";
-		}
+		const db = getFirestore();
+		const itemsCollection = collection(db, "items");
 
-		// console.log(categoria);
+		const ref = tipo
+			? query(itemsCollection, where("tipo", "==", tipo))
+			: itemsCollection;
 
-		const promesa = new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve(products);
-			}, 500);
-		});
-
-		promesa.then((respuesta) => {
-			if (categoria === "all") {
-				setItems(respuesta);
-			} else {
-				const array_productos = respuesta.filter(
-					(producto) => producto.tipo === categoria
-				);
-				setItems(array_productos);
-			}
+		getDocs(ref).then((response) => {
+			const products = response.docs.map((prod) => {
+				// console.log(prod);
+				return {
+					id: prod.id,
+					...prod.data(),
+				};
+			});
+			setItems(products);
 		});
 	}, [tipo]);
 

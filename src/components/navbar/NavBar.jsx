@@ -1,20 +1,37 @@
-import React, { useState, useContext,  useEffect  } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import CartWidget from "./CartWidget";
 import { CartContext } from "../Context/Context";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { useMemo } from "react";
 
 const NavBar = () => {
-	const { cartTotal} = useContext(CartContext);
+	const { cartTotal } = useContext(CartContext);
 	const [cartState, setCartState] = useState(true);
+	const [cat, setCat] = useState([]);
 
+	useEffect(() => {
+		if (cartTotal() !== 0) {
+			setCartState(false);
+		}
+	}, [cartTotal()]);
 
-	useEffect(()=>{
-	if(cartTotal() !== 0){
-		setCartState(false)
-	}
-	},[cartTotal()])
-	
+	useMemo(() => {
+		const db = getFirestore();
+		const CatCollection = collection(db, "categories");
 
+		getDocs(CatCollection).then((resp) => {
+			const categories = resp.docs.map((cat) => {
+				return {
+					id: cat.id,
+					...cat.data(),
+				};
+			});
+			setCat(categories);
+		});
+	}, []);
+
+	console.log(cat)
 
 	return (
 		<nav className="navbar navbar-expand-lg">
@@ -37,65 +54,21 @@ const NavBar = () => {
 					className="collapse navbar-collapse d-flex justify-content-end "
 					id="navbarNav"
 				>
-					<ul className="navbar-nav ">
-						<li className="nav-item">
+					<ul className="nav ">
+						{cat.map((categoria) => {
+							<div className="nav-item text-white">
 							<Link
+								key={categoria.id}
 								className="nav-link "
-								aria-current="page"
-								to={"/categorias/abrigos"}
+								to={`/categorias/${categoria.tipo}`}
 							>
-								Abrigos
+								{categoria.name}
 							</Link>
-						</li>
-						<li className="nav-item">
-							<Link
-								className="nav-link "
-								aria-current="page"
-								to={"/categorias/accesorios"}
-							>
-								Accesorios
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link
-								className="nav-link "
-								aria-current="page"
-								to={"/categorias/camisas"}
-							>
-								Camisas
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link
-								className="nav-link "
-								aria-current="page"
-								to={"/categorias/calzados"}
-							>
-								Calzados
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link
-								className="nav-link "
-								aria-current="page"
-								to={"/categorias/pantalones"}
-							>
-								Pantalones
-							</Link>
-						</li>
-						<li className="nav-item">
-							<Link
-								className="nav-link "
-								aria-current="page"
-								to={"/categorias/remeras"}
-							>
-								Remeras
-							</Link>
-						</li>
+							</div>;
+						})}
 					</ul>
 				</div>
-				{cartState === true ? "" : (
-				<CartWidget />)}
+				{cartState === true ? "" : <CartWidget />}
 			</div>
 		</nav>
 	);

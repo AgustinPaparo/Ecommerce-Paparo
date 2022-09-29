@@ -1,24 +1,22 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { products } from "../Json/products";
 import ItemDetail from "../Item/ItemDetail";
 import NavBar from "../Navbar/NavBar";
 import Footer from "../Footer";
 import { useParams } from "react-router-dom";
+import { collection, doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState({});
 	const { id } = useParams();
 
 	useEffect(() => {
-		const getProduct = new Promise((res, fail) => {
-			setTimeout(() => {
-				res(products.find((prod) => prod.id === parseInt(id)) || []);
-			}, 500);
-		});
-		getProduct.then((prod) => {
-			setItem(prod);
+		const db = getFirestore();
+		const itemsCollection = collection(db, "items");
+		const ref = doc(itemsCollection, id);
+		getDoc(ref).then((snapShot) => {
+			setItem({ id: snapShot.id, ...snapShot.data() });
 		});
 	}, [id]);
 
