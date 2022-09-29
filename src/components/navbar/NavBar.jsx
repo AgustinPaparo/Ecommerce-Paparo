@@ -54,17 +54,19 @@ const NavBar = () => {
 					className="collapse navbar-collapse d-flex justify-content-end "
 					id="navbarNav"
 				>
+					{/* AL AGREGAR EL MAP SE ME ROMPIO MI NAVBAR :'(  */}
+					{/* No logro encontrar el error, cat me esta cargando bien */}
 					<ul className="nav ">
-						{cat.map((categoria) => {
-							<div className="nav-item text-white">
+						{cat.map((categorias) => {
+							<li className="nav-item text-white">
 							<Link
-								key={categoria.id}
+								key={categorias.id}
 								className="nav-link "
-								to={`/categorias/${categoria.tipo}`}
+								to={`/categorias/${categorias.tipo}`}
 							>
-								{categoria.name}
+								{categorias.name}
 							</Link>
-							</div>;
+							</li>;
 						})}
 					</ul>
 				</div>
