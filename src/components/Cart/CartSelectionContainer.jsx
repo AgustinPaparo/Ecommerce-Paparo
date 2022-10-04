@@ -1,9 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const CartSelectionContainer = ({ items, clear, cartTotal, cartTotalPrice, deleteOne }) => {
-	
+const CartSelectionContainer = ({
+	items,
+	clear,
+	cartTotal,
+	cartTotalPrice,
+	deleteOne,
+}) => {
 	return (
 		<div className="container mb-5">
 			<table className="table table-striped table-light">
@@ -22,17 +28,21 @@ const CartSelectionContainer = ({ items, clear, cartTotal, cartTotalPrice, delet
 							<td>{item.nombre}</td>
 							<td>${item.precio}</td>
 							<td>{item.counter}</td>
-							<td>$({item.counter}*{item.precio})</td>
-							<td><button
-				type="button"
-				className="btn btn-danger btn-sm position-relative mx-2"
-				title="Eliminar producto"
-				onClick={() => {
-					deleteOne(item.id);
-				}}
-			>
-				<FontAwesomeIcon icon={faTrash} />
-			</button></td>
+							<td>
+							${item.counter * item.precio}
+							</td>
+							<td>
+								<button
+									type="button"
+									className="btn btn-danger btn-sm position-relative mx-2"
+									title="Eliminar producto"
+									onClick={() => {
+										deleteOne(item.id);
+									}}
+								>
+									<FontAwesomeIcon icon={faTrash} />
+								</button>
+							</td>
 						</tr>
 					</tbody>
 				))}
@@ -42,6 +52,11 @@ const CartSelectionContainer = ({ items, clear, cartTotal, cartTotalPrice, delet
 			<button className="btn btn-danger btn-sm ms-3 " onClick={clear}>
 				Vaciar
 			</button>
+			<Link to={"/checkout"} title="Finalizar Compra">
+				<button className="btn btn-success btn-sm ms-3 ">
+					Finalizar Compra{" "}
+				</button>
+			</Link>
 		</div>
 	);
 };
