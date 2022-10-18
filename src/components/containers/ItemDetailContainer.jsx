@@ -2,8 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemDetail from "../Item/ItemDetail";
-import NavBar from "../Navbar/NavBar";
-import Footer from "../Footer";
 import { useParams } from "react-router-dom";
 import { collection, doc, getDoc, getFirestore } from "firebase/firestore";
 
@@ -22,7 +20,6 @@ const ItemDetailContainer = () => {
 
 	return (
 		<>
-			<NavBar />
 
 			<div className="container">
 				<div className="row">
@@ -31,7 +28,6 @@ const ItemDetailContainer = () => {
 				<ItemDetail item={item} />
 			</div>
 
-			<Footer />
 		</>
 	);
 };

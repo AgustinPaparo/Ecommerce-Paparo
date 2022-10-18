@@ -57,7 +57,7 @@ const Checkout = () => {
 				<div className="row">
 					<div className="col-md-4 offset-md-2">
 						<div className="mb-3">
-							<label for="nombre" className="form-label">
+							<label htmlFor="nombre" className="form-label">
 								Nombre
 							</label>
 							<input
@@ -68,7 +68,7 @@ const Checkout = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label for="email" className="form-label">
+							<label htmlFor="email" className="form-label">
 								Email
 							</label>
 							<input
@@ -79,7 +79,7 @@ const Checkout = () => {
 							/>
 						</div>
 						<div className="mb-3">
-							<label for="telefono" className="form-label">
+							<label htmlFor="telefono" className="form-label">
 								Teléfono
 							</label>
 							<input

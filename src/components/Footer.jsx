@@ -1,12 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
 	faLocationDot,
 	faClock,
 	faEnvelope,
 	faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -14,13 +15,21 @@ const Footer = () => {
 			<div className="row">
 				<div className="col-6 text-center">
 					<h4 className="mb-3">Encontranos en nuestras Redes!</h4>
-					<a href="https://www.facebook.com/elizaldenegociosinmobiliarios">
+					<Link href="https://www.facebook.com/">
 						<FontAwesomeIcon icon={faFacebook} /> Facebook
-					</a>
+					</Link>
 					<br />
-					<a href="https://www.instagram.com/elizalde_asociados/">
+					<Link href="https://www.instagram.com//">
 						<FontAwesomeIcon icon={faInstagram} /> Instagram
-					</a>
+					</Link>
+					<br />
+					<Link href="https://www.instagram.com//">
+						<FontAwesomeIcon icon={faTwitter} /> Twitter
+					</Link>
+					<br />
+					<Link href="https://www.instagram.com//">
+						<FontAwesomeIcon icon={faLinkedin} /> Linkedin
+					</Link>
 				</div>
 				<div className="col-6 text-center">
 					<h4 className="mb-3">Oficina central</h4>
@@ -29,12 +38,12 @@ const Footer = () => {
 						Corrientes, Argentina
 					</p>
 					<p>
-						<FontAwesomeIcon icon={faClock} /> De Lunes a Viernes de 9:00 hs a
+						<FontAwesomeIcon icon={faClock} /> De Lunes Link Viernes de 9:00 hs Link
 						17:00hs
 					</p>
 					<p>
-						<FontAwesomeIcon icon={faEnvelope} />{" "}
-						inmobiliaria@elizaldeasociados.com.ar
+						<FontAwesomeIcon icon={faEnvelope} /> 
+						 example@example.com.ar
 					</p>
 					<p>
 						<FontAwesomeIcon icon={faPhone} /> +54 9 3794 80-3211

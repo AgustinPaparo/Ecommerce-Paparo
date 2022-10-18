@@ -52,9 +52,14 @@ const CartSelectionContainer = ({
 			<button className="btn btn-danger btn-sm ms-3 " onClick={clear}>
 				Vaciar
 			</button>
+			<Link to={"/"} title="Seguir Compra">
+				<button className="btn btn-primary btn-sm ms-3 ">
+					Seguir comprando{" "}
+				</button>
+			</Link>
 			<Link to={"/checkout"} title="Finalizar Compra">
 				<button className="btn btn-success btn-sm ms-3 ">
-					Finalizar Compra{" "}
+					Finalizar Compra
 				</button>
 			</Link>
 		</div>

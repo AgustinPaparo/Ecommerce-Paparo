@@ -2,8 +2,6 @@ import React from "react";
 import ItemList from "../Item/ItemList";
 import { useEffect } from "react";
 import { useState } from "react";
-import NavBar from "../Navbar/NavBar";
-import Footer from "../Footer";
 import { useParams } from "react-router-dom";
 import {
 	collection,
@@ -39,12 +37,10 @@ const ItemListContainer = () => {
 
 	return (
 		<>
-			<NavBar />
 			<div id="contenido" className="text-center container-fluid py-5 px-5">
 				<h1>Catálogo</h1>
 				<ItemList items={items} />
 			</div>
-			<Footer />
 		</>
 	);
 };

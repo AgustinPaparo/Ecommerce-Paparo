@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useMemo } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+
 import CartWidget from "./CartWidget";
 import { CartContext } from "../Context/Context";
-import { Link, NavLink } from "react-router-dom";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { useMemo } from "react";
 
 const NavBar = () => {
 	const { cartTotal } = useContext(CartContext);
@@ -13,8 +13,10 @@ const NavBar = () => {
 	useEffect(() => {
 		if (cartTotal() !== 0) {
 			setCartState(false);
+		} else {
+			setCartState(true);
 		}
-	}, [cartTotal()]);
+	}, [cartTotal]);
 
 	useMemo(() => {
 		const db = getFirestore();
@@ -30,8 +32,6 @@ const NavBar = () => {
 			setCat(categories);
 		});
 	}, []);
-
-	console.log(cat)
 
 	return (
 		<nav className="navbar navbar-expand-lg">
@@ -54,19 +54,18 @@ const NavBar = () => {
 					className="collapse navbar-collapse d-flex justify-content-end "
 					id="navbarNav"
 				>
-					{/* AL AGREGAR EL MAP SE ME ROMPIO MI NAVBAR :'(  */}
-					{/* No logro encontrar el error, cat me esta cargando bien */}
 					<ul className="nav ">
 						{cat.map((categorias) => {
-							<li className="nav-item text-white">
-							<Link
-								key={categorias.id}
-								className="nav-link "
-								to={`/categorias/${categorias.tipo}`}
-							>
-								{categorias.name}
-							</Link>
-							</li>;
+							return (
+								<li className="nav-item" key={categorias.id}>
+									<NavLink
+										className="nav-link text-white"
+										to={`/categorias/${categorias.tipo}`}
+									>
+										{categorias.name}
+									</NavLink>
+								</li>
+							);
 						})}
 					</ul>
 				</div>
