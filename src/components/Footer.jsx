@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+	faFacebook,
+	faInstagram,
+	faTwitter,
+	faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import {
 	faLocationDot,
 	faClock,
@@ -38,12 +43,12 @@ const Footer = () => {
 						Corrientes, Argentina
 					</p>
 					<p>
-						<FontAwesomeIcon icon={faClock} /> De Lunes Link Viernes de 9:00 hs Link
-						17:00hs
+						<FontAwesomeIcon icon={faClock} /> De Lunes Link Viernes de 9:00 hs
+						a 17:00hs
 					</p>
 					<p>
-						<FontAwesomeIcon icon={faEnvelope} /> 
-						 example@example.com.ar
+						<FontAwesomeIcon icon={faEnvelope} />
+						example@example.com.ar
 					</p>
 					<p>
 						<FontAwesomeIcon icon={faPhone} /> +54 9 3794 80-3211

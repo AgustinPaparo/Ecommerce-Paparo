@@ -49,7 +49,6 @@ const Provider = ({ children }) => {
 			count = count + producto.counter;
 		});
 		return count;
-		// return cart.reduce((total, item) => (total += item.counter), 0);
 	};
 
 	const cartTotalPrice = () => {

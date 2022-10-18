@@ -28,9 +28,7 @@ const CartSelectionContainer = ({
 							<td>{item.nombre}</td>
 							<td>${item.precio}</td>
 							<td>{item.counter}</td>
-							<td>
-							${item.counter * item.precio}
-							</td>
+							<td>${item.counter * item.precio}</td>
 							<td>
 								<button
 									type="button"

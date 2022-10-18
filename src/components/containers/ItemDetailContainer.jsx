@@ -20,14 +20,12 @@ const ItemDetailContainer = () => {
 
 	return (
 		<>
-
 			<div className="container">
 				<div className="row">
 					<h1 className="text-center mb-5">Detalle del Producto:</h1>
 				</div>
 				<ItemDetail item={item} />
 			</div>
-
 		</>
 	);
 };

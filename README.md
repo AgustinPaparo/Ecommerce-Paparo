@@ -6,14 +6,6 @@ El proyecto consta de hacer un sitio web tipo E-commerce con el fin de demostrar
  La aplicación permite conectarse con un backend realizdo con Firebase. Permite seleccionar ciertos productos, navegar a sus detalles, agregarlos al carrito, poder acceder a él, simular la compra de los productos. 
  Al clickear sobre el botón "realizar compra", pide llenar un formulario con datos básicos y luego de confirmar se genera un id de orden para el usuario y en firebase se guarda la orden con los productos que compró.
 
-
-Siguiendo los pasos del profesor @JavierVeron y con ayuda de los tutores, se fue desarrollando un sitio E-commerce utilizando
-distintas tecnologías y técnicas de React-Js.
-
-
-
-
-
 ## 🛠 Tecnologías y librerías:
 
 * Interfaz realizada con ReactJS 
